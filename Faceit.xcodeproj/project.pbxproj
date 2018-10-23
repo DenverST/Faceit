@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF57E133217EC794001F11E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E132217EC794001F11E3 /* AppDelegate.swift */; };
+		FF57E135217EC794001F11E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E134217EC794001F11E3 /* ViewController.swift */; };
+		FF57E138217EC794001F11E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57E136217EC794001F11E3 /* Main.storyboard */; };
+		FF57E13A217EC796001F11E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57E139217EC796001F11E3 /* Assets.xcassets */; };
+		FF57E13D217EC796001F11E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57E13B217EC796001F11E3 /* LaunchScreen.storyboard */; };
+		FF57E148217EC796001F11E3 /* FaceitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E147217EC796001F11E3 /* FaceitTests.swift */; };
+		FF57E153217EC797001F11E3 /* FaceitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E152217EC797001F11E3 /* FaceitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF57E144217EC796001F11E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF57E127217EC793001F11E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF57E12E217EC793001F11E3;
+			remoteInfo = Faceit;
+		};
+		FF57E14F217EC797001F11E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF57E127217EC793001F11E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF57E12E217EC793001F11E3;
+			remoteInfo = Faceit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF57E12F217EC794001F11E3 /* Faceit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faceit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF57E132217EC794001F11E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF57E134217EC794001F11E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF57E137217EC794001F11E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF57E139217EC796001F11E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF57E13C217EC796001F11E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF57E13E217EC796001F11E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF57E143217EC796001F11E3 /* FaceitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF57E147217EC796001F11E3 /* FaceitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceitTests.swift; sourceTree = "<group>"; };
+		FF57E149217EC796001F11E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF57E14E217EC797001F11E3 /* FaceitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF57E152217EC797001F11E3 /* FaceitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceitUITests.swift; sourceTree = "<group>"; };
+		FF57E154217EC797001F11E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF57E12C217EC793001F11E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF57E140217EC796001F11E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF57E14B217EC797001F11E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF57E126217EC793001F11E3 = {
+			isa = PBXGroup;
+			children = (
+				FF57E131217EC794001F11E3 /* Faceit */,
+				FF57E146217EC796001F11E3 /* FaceitTests */,
+				FF57E151217EC797001F11E3 /* FaceitUITests */,
+				FF57E130217EC794001F11E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF57E130217EC794001F11E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF57E12F217EC794001F11E3 /* Faceit.app */,
+				FF57E143217EC796001F11E3 /* FaceitTests.xctest */,
+				FF57E14E217EC797001F11E3 /* FaceitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF57E131217EC794001F11E3 /* Faceit */ = {
+			isa = PBXGroup;
+			children = (
+				FF57E132217EC794001F11E3 /* AppDelegate.swift */,
+				FF57E134217EC794001F11E3 /* ViewController.swift */,
+				FF57E136217EC794001F11E3 /* Main.storyboard */,
+				FF57E139217EC796001F11E3 /* Assets.xcassets */,
+				FF57E13B217EC796001F11E3 /* LaunchScreen.storyboard */,
+				FF57E13E217EC796001F11E3 /* Info.plist */,
+			);
+			path = Faceit;
+			sourceTree = "<group>";
+		};
+		FF57E146217EC796001F11E3 /* FaceitTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF57E147217EC796001F11E3 /* FaceitTests.swift */,
+				FF57E149217EC796001F11E3 /* Info.plist */,
+			);
+			path = FaceitTests;
+			sourceTree = "<group>";
+		};
+		FF57E151217EC797001F11E3 /* FaceitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF57E152217EC797001F11E3 /* FaceitUITests.swift */,
+				FF57E154217EC797001F11E3 /* Info.plist */,
+			);
+			path = FaceitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF57E12E217EC793001F11E3 /* Faceit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF57E157217EC797001F11E3 /* Build configuration list for PBXNativeTarget "Faceit" */;
+			buildPhases = (
+				FF57E12B217EC793001F11E3 /* Sources */,
+				FF57E12C217EC793001F11E3 /* Frameworks */,
+				FF57E12D217EC793001F11E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Faceit;
+			productName = Faceit;
+			productReference = FF57E12F217EC794001F11E3 /* Faceit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF57E142217EC796001F11E3 /* FaceitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF57E15A217EC797001F11E3 /* Build configuration list for PBXNativeTarget "FaceitTests" */;
+			buildPhases = (
+				FF57E13F217EC796001F11E3 /* Sources */,
+				FF57E140217EC796001F11E3 /* Frameworks */,
+				FF57E141217EC796001F11E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF57E145217EC796001F11E3 /* PBXTargetDependency */,
+			);
+			name = FaceitTests;
+			productName = FaceitTests;
+			productReference = FF57E143217EC796001F11E3 /* FaceitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF57E14D217EC797001F11E3 /* FaceitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF57E15D217EC797001F11E3 /* Build configuration list for PBXNativeTarget "FaceitUITests" */;
+			buildPhases = (
+				FF57E14A217EC797001F11E3 /* Sources */,
+				FF57E14B217EC797001F11E3 /* Frameworks */,
+				FF57E14C217EC797001F11E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF57E150217EC797001F11E3 /* PBXTargetDependency */,
+			);
+			name = FaceitUITests;
+			productName = FaceitUITests;
+			productReference = FF57E14E217EC797001F11E3 /* FaceitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF57E127217EC793001F11E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Denver Stove";
+				TargetAttributes = {
+					FF57E12E217EC793001F11E3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					FF57E142217EC796001F11E3 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FF57E12E217EC793001F11E3;
+					};
+					FF57E14D217EC797001F11E3 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FF57E12E217EC793001F11E3;
+					};
+				};
+			};
+			buildConfigurationList = FF57E12A217EC793001F11E3 /* Build configuration list for PBXProject "Faceit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF57E126217EC793001F11E3;
+			productRefGroup = FF57E130217EC794001F11E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF57E12E217EC793001F11E3 /* Faceit */,
+				FF57E142217EC796001F11E3 /* FaceitTests */,
+				FF57E14D217EC797001F11E3 /* FaceitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF57E12D217EC793001F11E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF57E13D217EC796001F11E3 /* LaunchScreen.storyboard in Resources */,
+				FF57E13A217EC796001F11E3 /* Assets.xcassets in Resources */,
+				FF57E138217EC794001F11E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF57E141217EC796001F11E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF57E14C217EC797001F11E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF57E12B217EC793001F11E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF57E135217EC794001F11E3 /* ViewController.swift in Sources */,
+				FF57E133217EC794001F11E3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF57E13F217EC796001F11E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF57E148217EC796001F11E3 /* FaceitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF57E14A217EC797001F11E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF57E153217EC797001F11E3 /* FaceitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF57E145217EC796001F11E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF57E12E217EC793001F11E3 /* Faceit */;
+			targetProxy = FF57E144217EC796001F11E3 /* PBXContainerItemProxy */;
+		};
+		FF57E150217EC797001F11E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF57E12E217EC793001F11E3 /* Faceit */;
+			targetProxy = FF57E14F217EC797001F11E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF57E136217EC794001F11E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF57E137217EC794001F11E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF57E13B217EC796001F11E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF57E13C217EC796001F11E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF57E155217EC797001F11E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF57E156217EC797001F11E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF57E158217EC797001F11E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7825C7P6ZZ;
+				INFOPLIST_FILE = Faceit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DenverTStove.Faceit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF57E159217EC797001F11E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7825C7P6ZZ;
+				INFOPLIST_FILE = Faceit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DenverTStove.Faceit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF57E15B217EC797001F11E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7825C7P6ZZ;
+				INFOPLIST_FILE = FaceitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DenverTStove.FaceitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Faceit.app/Faceit";
+			};
+			name = Debug;
+		};
+		FF57E15C217EC797001F11E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7825C7P6ZZ;
+				INFOPLIST_FILE = FaceitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DenverTStove.FaceitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Faceit.app/Faceit";
+			};
+			name = Release;
+		};
+		FF57E15E217EC797001F11E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7825C7P6ZZ;
+				INFOPLIST_FILE = FaceitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DenverTStove.FaceitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Faceit;
+			};
+			name = Debug;
+		};
+		FF57E15F217EC797001F11E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7825C7P6ZZ;
+				INFOPLIST_FILE = FaceitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DenverTStove.FaceitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Faceit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF57E12A217EC793001F11E3 /* Build configuration list for PBXProject "Faceit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF57E155217EC797001F11E3 /* Debug */,
+				FF57E156217EC797001F11E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF57E157217EC797001F11E3 /* Build configuration list for PBXNativeTarget "Faceit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF57E158217EC797001F11E3 /* Debug */,
+				FF57E159217EC797001F11E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF57E15A217EC797001F11E3 /* Build configuration list for PBXNativeTarget "FaceitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF57E15B217EC797001F11E3 /* Debug */,
+				FF57E15C217EC797001F11E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF57E15D217EC797001F11E3 /* Build configuration list for PBXNativeTarget "FaceitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF57E15E217EC797001F11E3 /* Debug */,
+				FF57E15F217EC797001F11E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF57E127217EC793001F11E3 /* Project object */;
+}
