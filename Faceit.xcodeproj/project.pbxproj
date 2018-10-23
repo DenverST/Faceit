@@ -14,6 +14,7 @@
 		FF57E13D217EC796001F11E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57E13B217EC796001F11E3 /* LaunchScreen.storyboard */; };
 		FF57E148217EC796001F11E3 /* FaceitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E147217EC796001F11E3 /* FaceitTests.swift */; };
 		FF57E153217EC797001F11E3 /* FaceitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E152217EC797001F11E3 /* FaceitUITests.swift */; };
+		FF57E162217EC824001F11E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF57E161217EC824001F11E3 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FF57E14E217EC797001F11E3 /* FaceitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF57E152217EC797001F11E3 /* FaceitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceitUITests.swift; sourceTree = "<group>"; };
 		FF57E154217EC797001F11E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF57E161217EC824001F11E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		FF57E126217EC793001F11E3 = {
 			isa = PBXGroup;
 			children = (
+				FF57E161217EC824001F11E3 /* Default-568h@2x.png */,
 				FF57E131217EC794001F11E3 /* Faceit */,
 				FF57E146217EC796001F11E3 /* FaceitTests */,
 				FF57E151217EC797001F11E3 /* FaceitUITests */,
@@ -97,12 +100,9 @@
 		FF57E131217EC794001F11E3 /* Faceit */ = {
 			isa = PBXGroup;
 			children = (
-				FF57E132217EC794001F11E3 /* AppDelegate.swift */,
 				FF57E134217EC794001F11E3 /* ViewController.swift */,
 				FF57E136217EC794001F11E3 /* Main.storyboard */,
-				FF57E139217EC796001F11E3 /* Assets.xcassets */,
-				FF57E13B217EC796001F11E3 /* LaunchScreen.storyboard */,
-				FF57E13E217EC796001F11E3 /* Info.plist */,
+				FF57E160217EC7EB001F11E3 /* Supporting Files */,
 			);
 			path = Faceit;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				FF57E154217EC797001F11E3 /* Info.plist */,
 			);
 			path = FaceitUITests;
+			sourceTree = "<group>";
+		};
+		FF57E160217EC7EB001F11E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF57E132217EC794001F11E3 /* AppDelegate.swift */,
+				FF57E13B217EC796001F11E3 /* LaunchScreen.storyboard */,
+				FF57E13E217EC796001F11E3 /* Info.plist */,
+				FF57E139217EC796001F11E3 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF57E13D217EC796001F11E3 /* LaunchScreen.storyboard in Resources */,
+				FF57E162217EC824001F11E3 /* Default-568h@2x.png in Resources */,
 				FF57E13A217EC796001F11E3 /* Assets.xcassets in Resources */,
 				FF57E138217EC794001F11E3 /* Main.storyboard in Resources */,
 			);
@@ -434,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7825C7P6ZZ;
-				INFOPLIST_FILE = Faceit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Faceit/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7825C7P6ZZ;
-				INFOPLIST_FILE = Faceit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Faceit/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
