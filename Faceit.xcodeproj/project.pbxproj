@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FF4E34BF217F317600ACAE8C /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E34BE217F317600ACAE8C /* FacialExpression.swift */; };
 		FF57E133217EC794001F11E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E132217EC794001F11E3 /* AppDelegate.swift */; };
-		FF57E135217EC794001F11E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E134217EC794001F11E3 /* ViewController.swift */; };
+		FF57E135217EC794001F11E3 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E134217EC794001F11E3 /* FaceViewController.swift */; };
 		FF57E138217EC794001F11E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57E136217EC794001F11E3 /* Main.storyboard */; };
 		FF57E13A217EC796001F11E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57E139217EC796001F11E3 /* Assets.xcassets */; };
 		FF57E13D217EC796001F11E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57E13B217EC796001F11E3 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,7 @@
 		FF57E153217EC797001F11E3 /* FaceitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E152217EC797001F11E3 /* FaceitUITests.swift */; };
 		FF57E162217EC824001F11E3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF57E161217EC824001F11E3 /* Default-568h@2x.png */; };
 		FF57E166217ECAA1001F11E3 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57E165217ECAA1001F11E3 /* FaceView.swift */; };
+		FFF465C32187C7D400542825 /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF465C22187C7D400542825 /* EmotionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 		FF4E34BE217F317600ACAE8C /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 		FF57E12F217EC794001F11E3 /* Faceit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faceit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF57E132217EC794001F11E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF57E134217EC794001F11E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF57E134217EC794001F11E3 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		FF57E137217EC794001F11E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF57E139217EC796001F11E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57E13C217EC796001F11E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		FF57E154217EC797001F11E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF57E161217EC824001F11E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FF57E165217ECAA1001F11E3 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		FFF465C22187C7D400542825 /* EmotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				FF57E165217ECAA1001F11E3 /* FaceView.swift */,
-				FF57E134217EC794001F11E3 /* ViewController.swift */,
+				FF57E134217EC794001F11E3 /* FaceViewController.swift */,
 				FF57E136217EC794001F11E3 /* Main.storyboard */,
+				FFF465C22187C7D400542825 /* EmotionsViewController.swift */,
 				FF4E34BE217F317600ACAE8C /* FacialExpression.swift */,
 				FF57E160217EC7EB001F11E3 /* Supporting Files */,
 			);
@@ -274,8 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF57E135217EC794001F11E3 /* ViewController.swift in Sources */,
+				FF57E135217EC794001F11E3 /* FaceViewController.swift in Sources */,
 				FF4E34BF217F317600ACAE8C /* FacialExpression.swift in Sources */,
+				FFF465C32187C7D400542825 /* EmotionsViewController.swift in Sources */,
 				FF57E133217EC794001F11E3 /* AppDelegate.swift in Sources */,
 				FF57E166217ECAA1001F11E3 /* FaceView.swift in Sources */,
 			);
