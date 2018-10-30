@@ -42,7 +42,7 @@ class FaceViewController: UIViewController {
         }
     }
     
-    var expression = FacialExpression(eyes: .closed, mouth: .frown) {
+    var expression = FacialExpression(eyes: .open, mouth: .neutral) {
         didSet {
             updateUI()
         }
@@ -60,6 +60,6 @@ class FaceViewController: UIViewController {
         faceView?.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
     }
     
-    private let mouthCurvatures: [FacialExpression.Mouth: Double] = [.grin:0.5,.frown:-1.0,.smile:1.0,.neutral:1.0,.smirk:-0.5]
+    private let mouthCurvatures: [FacialExpression.Mouth: Double] = [.grin:0.5,.frown:-1.0,.smile:1.0,.neutral:0.0,.smirk:-0.5]
 }
 
