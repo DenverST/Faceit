@@ -13,7 +13,21 @@ class EyeView: UIView
     var lineWidth: CGFloat = 5.0 { didSet { setNeedsDisplay() } }
     var color: UIColor = UIColor.blue { didSet { setNeedsDisplay() } }
     
-    var eyeOpen: Bool = true { didSet { setNeedsDisplay() } }
+    var _eyeOpen: Bool = true { didSet { setNeedsDisplay() } }
+    
+    var eyeOpen: Bool {
+        get {
+            return _eyeOpen
+        }
+        set {
+            if newValue != _eyeOpen {
+                UIView.transition(with: self, duration: 0.4, options: [.transitionFlipFromTop], animations: {
+                    self._eyeOpen = newValue
+                })
+            }
+        }
+    }
+    
     
     override func draw(_ rect: CGRect) {
         var path: UIBezierPath

@@ -27,6 +27,10 @@ class FaceViewController: VCLLoggingViewController {
         }
     }
     
+    private struct HeadShake {
+        
+    }
+    
     @objc func increaseHappiness() {
         expression = expression.happier
     }
