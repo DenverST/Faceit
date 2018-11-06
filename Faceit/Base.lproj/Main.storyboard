@@ -133,7 +133,9 @@
                     <navigationItem key="navigationItem" title="Emotions" id="LWw-XP-Yeg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RiJ-jY-sTh">
                             <connections>
-                                <segue destination="2Iu-gJ-Cdk" kind="presentation" id="ubj-IW-5Ge"/>
+                                <segue destination="2Iu-gJ-Cdk" kind="popoverPresentation" popoverAnchorBarButtonItem="RiJ-jY-sTh" id="ubj-IW-5Ge">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -146,7 +148,7 @@
         <scene sceneID="k51-is-EVd">
             <objects>
                 <tableViewController id="Ljz-JH-MVD" customClass="ExpressionEditorViewController" customModule="Faceit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vG5-TU-1zK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vG5-TU-1zK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,6 +167,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Ljz-JH-MVD" id="uel-TG-km9"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -180,16 +185,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="231.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-Xh-g4c" customClass="FaceView" customModule="Faceit" customModuleProvider="target">
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqW-FT-lbs">
                                                     <rect key="frame" x="20" y="11" width="374" height="210"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
+                                                    <connections>
+                                                        <segue destination="Gp8-EQ-0xF" kind="embed" identifier="Embed Face" id="aec-qL-kLP"/>
+                                                    </connections>
+                                                </containerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Uvu-Xh-g4c" firstAttribute="bottom" secondItem="meg-FU-8EZ" secondAttribute="bottomMargin" id="1Z1-ux-sfo"/>
-                                                <constraint firstItem="Uvu-Xh-g4c" firstAttribute="top" secondItem="meg-FU-8EZ" secondAttribute="topMargin" id="4ty-Dp-Ldg"/>
-                                                <constraint firstItem="Uvu-Xh-g4c" firstAttribute="trailing" secondItem="meg-FU-8EZ" secondAttribute="trailingMargin" id="lkJ-f1-rbM"/>
-                                                <constraint firstItem="Uvu-Xh-g4c" firstAttribute="leading" secondItem="meg-FU-8EZ" secondAttribute="leadingMargin" id="zbe-tV-0ES"/>
+                                                <constraint firstItem="MqW-FT-lbs" firstAttribute="leading" secondItem="meg-FU-8EZ" secondAttribute="leadingMargin" id="84E-vR-sJ3"/>
+                                                <constraint firstItem="MqW-FT-lbs" firstAttribute="trailing" secondItem="meg-FU-8EZ" secondAttribute="trailingMargin" id="J7f-FK-TLD"/>
+                                                <constraint firstItem="MqW-FT-lbs" firstAttribute="top" secondItem="meg-FU-8EZ" secondAttribute="topMargin" id="lH9-hf-pOI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MqW-FT-lbs" secondAttribute="bottom" id="wNl-dL-GEx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -207,6 +214,9 @@
                                                         <segment title="Eyes Closed"/>
                                                         <segment title="Squinting"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="updateFace" destination="Ljz-JH-MVD" eventType="valueChanged" id="gI9-ls-ng7"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -233,6 +243,9 @@
                                                         <segment title="Smirk"/>
                                                         <segment title="Frown"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="updateFace" destination="Ljz-JH-MVD" eventType="valueChanged" id="Rgg-Ah-CSj"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -257,9 +270,20 @@
                                 <action selector="cancel:" destination="Ljz-JH-MVD" id="xSj-Al-PYj"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="uts-ub-5Qa">
+                            <connections>
+                                <segue destination="jqa-zH-TUX" kind="unwind" identifier="Add Emotion" unwindAction="addEmotionalFaceFrom:" id="pnw-Gz-lgt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="eyeControl" destination="opW-It-8N1" id="kcq-SY-K85"/>
+                        <outlet property="mouthControl" destination="Rbe-Xw-Dr6" id="Hju-yM-wGy"/>
+                        <outlet property="nameTextField" destination="dM4-Is-Qyp" id="neW-C7-sYk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oX4-3N-9WU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jqa-zH-TUX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2842.0289855072465" y="-224.33035714285714"/>
         </scene>
@@ -298,6 +322,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1l4-pL-lgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1931.8840579710147" y="-224.33035714285714"/>
+        </scene>
+        <!--Blinking Face View Controller-->
+        <scene sceneID="nxh-jc-ZRY">
+            <objects>
+                <viewController id="Gp8-EQ-0xF" customClass="BlinkingFaceViewController" customModule="Faceit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0EL-SH-X0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="210"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8Mf-MR-z3h" customClass="FaceView" customModule="Faceit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="eyeOpen" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="mouthCurvature">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="0.90000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8Mf-MR-z3h" secondAttribute="bottom" id="Ekx-O9-wem"/>
+                            <constraint firstItem="8Mf-MR-z3h" firstAttribute="leading" secondItem="0EL-SH-X0Z" secondAttribute="leading" id="TtE-v8-UnF"/>
+                            <constraint firstAttribute="trailing" secondItem="8Mf-MR-z3h" secondAttribute="trailing" id="nTf-7M-AXg"/>
+                            <constraint firstItem="8Mf-MR-z3h" firstAttribute="top" secondItem="0EL-SH-X0Z" secondAttribute="top" id="oHv-b9-qzJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="8Mf-MR-z3h" id="2tb-4t-cwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84C-67-mim" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3756.521739130435" y="-224.33035714285714"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

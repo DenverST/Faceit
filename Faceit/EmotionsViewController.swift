@@ -9,6 +9,13 @@
 import UIKit
 
 class EmotionsViewController: UITableViewController {
+    
+    @IBAction func addEmotionalFace(from segue: UIStoryboardSegue) {
+        if let editor = segue.source as? ExpressionEditorViewController {
+            emotionalFaces.append((editor.name, editor.expression))
+            tableView.reloadData()
+        }
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emotionalFaces.count
