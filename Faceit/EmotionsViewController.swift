@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmotionsViewController: UITableViewController {
+class EmotionsViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
     @IBAction func addEmotionalFace(from segue: UIStoryboardSegue) {
         if let editor = segue.source as? ExpressionEditorViewController {
@@ -37,6 +37,20 @@ class EmotionsViewController: UITableViewController {
         let indexPath = tableView.indexPath(for: cell) {
                 faceViewController.expression = emotionalFaces[indexPath.row].expression
             faceViewController.navigationItem.title = emotionalFaces[indexPath.row].name
+        } else if destinationViewController is ExpressionEditorViewController {
+            if let popoverPresentationController = segue.destination.popoverPresentationController {
+                popoverPresentationController.delegate = self
+            }
+        }
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        if traitCollection.verticalSizeClass == .compact {
+            return .none
+        } else if traitCollection.horizontalSizeClass == .compact {
+            return .overFullScreen
+        } else {
+            return .none
         }
     }
     

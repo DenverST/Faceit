@@ -48,6 +48,15 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if let popoverPresentationController = navigationController?.popoverPresentationController {
+            if popoverPresentationController.arrowDirection != .unknown {
+                navigationItem.leftBarButtonItem = nil
+            }
+        }
+        var size = tableView.minimumSize(forSection: 0)
+        size.height -= tableView.heightForRow(at: IndexPath(row: 1, section: 0))
+        size.height += size.width
+        preferredContentSize = size
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,4 +71,30 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
         presentingViewController?.dismiss(animated: true)
     }
     
+}
+
+
+extension UITableView {
+    
+    func minimumSize(forSection section: Int) -> CGSize {
+        var width: CGFloat = 0
+        var height: CGFloat = 0
+        for row in 0..<numberOfRows(inSection: section) {
+            let indexPath = IndexPath(row: row, section: section)
+            if let cell = cellForRow(at: indexPath) ?? dataSource?.tableView(self, cellForRowAt: indexPath) {
+                let cellSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+                width = max(width, cellSize.width)
+                height += heightForRow(at: indexPath)
+            }
+        }
+        return CGSize(width: width, height: height)
+    }
+    
+    func heightForRow(at indexPath: IndexPath? = nil) -> CGFloat {
+        if indexPath != nil, let height = delegate?.tableView?(self, heightForRowAt: indexPath!) {
+            return height
+        } else {
+            return rowHeight
+        }
+    }
 }
