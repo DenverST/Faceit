@@ -8,25 +8,35 @@
 
 import UIKit
 
-class EmotionsViewController: VCLLoggingViewController {
+class EmotionsViewController: UITableViewController {
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return emotionalFaces.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Emotion Cell", for: indexPath)
+        cell.textLabel?.text = emotionalFaces[indexPath.row].name
+        return cell
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var destinationViewController = segue.destination
         if let navigationController = destinationViewController as? UINavigationController {
             destinationViewController = navigationController.visibleViewController ?? destinationViewController
         }
         if let faceViewController = destinationViewController as? FaceViewController,
-            let identifier = segue.identifier,
-            let expression = emotionalFaces[identifier] {
-                faceViewController.expression = expression
-            faceViewController.navigationItem.title = (sender as? UIButton)?.currentTitle
+        let cell = sender as? UITableViewCell,
+        let indexPath = tableView.indexPath(for: cell) {
+                faceViewController.expression = emotionalFaces[indexPath.row].expression
+            faceViewController.navigationItem.title = emotionalFaces[indexPath.row].name
         }
     }
     
-    private let emotionalFaces: Dictionary<String,FacialExpression> = [
-        "sad" : FacialExpression(eyes: .closed, mouth: .frown),
-        "happy" : FacialExpression(eyes: .open, mouth: .smile),
-        "worried" : FacialExpression(eyes: .open, mouth: .smirk)
+    private var emotionalFaces: [(name: String, expression: FacialExpression)] = [
+        ("Sad", FacialExpression(eyes: .closed, mouth: .frown)),
+        ("Happy", FacialExpression(eyes: .open, mouth: .smile)),
+        ("Worried", FacialExpression(eyes: .open, mouth: .smirk))
     ]
 
 }

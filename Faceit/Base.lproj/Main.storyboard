@@ -77,66 +77,6 @@
             </objects>
             <point key="canvasLocation" x="1092.753623188406" y="501.5625"/>
         </scene>
-        <!--Emotions-->
-        <scene sceneID="tSn-CO-pKN">
-            <objects>
-                <viewController id="ZCl-U9-3fT" customClass="EmotionsViewController" customModule="Faceit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="02K-c9-xAf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="azq-89-Dgs">
-                                <rect key="frame" x="139.5" y="348" width="135" height="200"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQj-hx-4aQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Sad">
-                                            <color key="titleColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="JJI-7L-N4w" kind="showDetail" identifier="sad" id="wIs-tY-qfj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uev-6V-A1H">
-                                        <rect key="frame" x="0.0" y="70" width="135" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Happy">
-                                            <color key="titleColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="JJI-7L-N4w" kind="showDetail" identifier="happy" id="ysO-Ot-qJA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTI-AS-ga0">
-                                        <rect key="frame" x="0.0" y="140" width="135" height="60"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Worried">
-                                            <color key="titleColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="JJI-7L-N4w" kind="showDetail" identifier="worried" id="qyK-hP-d77"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="azq-89-Dgs" firstAttribute="centerX" secondItem="02K-c9-xAf" secondAttribute="centerX" id="eUy-nM-Ndo"/>
-                            <constraint firstItem="azq-89-Dgs" firstAttribute="centerY" secondItem="02K-c9-xAf" secondAttribute="centerY" id="u88-PI-x5R"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="q88-vX-Mxw"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Emotions" id="rH7-L5-hW8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ssc-5J-jAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1092.753623188406" y="-224.33035714285714"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="CzM-9l-5PD">
             <objects>
@@ -148,12 +88,53 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ZCl-U9-3fT" kind="relationship" relationship="rootViewController" id="ebP-Jx-k19"/>
+                        <segue destination="gvl-Q0-PAh" kind="relationship" relationship="rootViewController" id="Sy6-3c-MFb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhY-eH-cV3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="182.60869565217394" y="-224.33035714285714"/>
+        </scene>
+        <!--Emotions-->
+        <scene sceneID="W4L-RP-Mva">
+            <objects>
+                <tableViewController id="gvl-Q0-PAh" customClass="EmotionsViewController" customModule="Faceit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rog-U5-ETC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Emotion Cell" textLabel="UEa-Vj-mv5" style="IBUITableViewCellStyleDefault" id="F6D-KS-gLW">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F6D-KS-gLW" id="szp-mL-DsZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UEa-Vj-mv5">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="JJI-7L-N4w" kind="showDetail" identifier="Show Emotion" id="Cbq-Ww-fBz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gvl-Q0-PAh" id="3b4-er-GIX"/>
+                            <outlet property="delegate" destination="gvl-Q0-PAh" id="Vjz-c9-j0u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Emotions" id="LWw-XP-Yeg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BrD-UJ-Lch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="-224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BSq-Ih-R3R">
@@ -175,6 +156,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wIs-tY-qfj"/>
+        <segue reference="Cbq-Ww-fBz"/>
     </inferredMetricsTieBreakers>
 </document>
