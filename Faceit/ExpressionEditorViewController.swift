@@ -39,6 +39,14 @@ class ExpressionEditorViewController: UITableViewController, UITextFieldDelegate
     
     private var faceViewController: BlinkingFaceViewController?
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "Add Emotion", name.isEmpty {
+            return false
+        } else {
+            return super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Embed Face" {
             faceViewController = segue.destination as? BlinkingFaceViewController
